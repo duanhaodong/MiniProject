@@ -85,7 +85,6 @@ void DataProcess(FILE* taxi, FILE* road, FILE* omap, FILE* onode, FILE* oroute) 
 		fprintf(omap, "%d,%d,%lf,%d\n", na, nb, length, width);
 	}
 	n = 0;
-	return;
 	while (!feof(taxi)) {
 		char pickup[100];
 		char dropoff[100];
