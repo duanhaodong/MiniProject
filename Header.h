@@ -17,6 +17,9 @@ struct NODE {
 	friend bool operator<(const NODE& a, const NODE&b) {
 		return lequal(a.x, b.x) || equal(a.x, b.x) && lequal(a.y, b.y);
 	}
+	friend bool operator==(const NODE&a, const NODE&b) {
+		return equal(a.x, b.x) && equal(a.y, b.y);
+	}
 	double Dis(const NODE& t) {
 		return sqrt((x - t.x)*(x - t.x) + (y - t.y)*(y - t.y));
 	}
